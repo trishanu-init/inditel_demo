@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+window.addEventListener('load', function() {
+  document.body.classList.add('loaded'); // Add class to body to hide preloader
+});
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './landingpage.css';
+import { TypeAnimation } from 'react-type-animation';
 import logo from './Copy of T.png'; // Replace with your actual logo image path
 import HeroImage from './one.jpg'; // Replace with your actual moving image path
 import aboutImage from './two.jpeg'; // Replace with your actual About Us image path
@@ -75,7 +76,22 @@ const LandingPage = () => {
       {/* Hero Section */}
       <section class="hero-section">
         <div class="hero-content">
-            <h1 class="hero-title">Welcome to IndiTel</h1>
+        <h1 class="hero-title">
+                    <TypeAnimation
+                  sequence={[
+                    // Same substring at the start will only be typed out once, initially
+                    'Welcome to Inditel !!',
+                    1000,
+                    'We provide communications and services',
+                    1000,
+                    'We offer the best Plans',
+                    1000
+                  ]}
+                  wrapper="span"
+                  speed={50}
+                  repeat={Infinity}
+                />
+            </h1>
             <p class="hero-subtitle">Join us today and explore amazing opportunities!</p>
             <button class="cta-button" onClick={handleCustomerLogin}>Get Started</button>
         </div>
@@ -144,6 +160,28 @@ const LandingPage = () => {
           )}
         </div>
       </section>
+
+{/* reviews section */}
+<section class="customer-reviews-section">
+    <h2>What Our Customers Say</h2>
+    <div class="reviews-container">
+        <div class="review-card">
+            <p class="review-text">"This service has transformed my business! Highly recommend."</p>
+            <h4 class="customer-name">John Doe</h4>
+            <span class="customer-rating">★★★★★</span>
+        </div>
+        <div class="review-card">
+            <p class="review-text">"Excellent support and great products. Will use again!"</p>
+            <h4 class="customer-name">Jane Smith</h4>
+            <span class="customer-rating">★★★★★</span>
+        </div>
+        <div class="review-card">
+            <p class="review-text">"A game-changer in the industry. Fantastic experience."</p>
+            <h4 class="customer-name">Emily Johnson</h4>
+            <span class="customer-rating">★★★★★</span>
+        </div>
+    </div>
+</section>
 
       {/* Footer Section */}
       <footer className="landing-footer">

@@ -1,12 +1,25 @@
 /* General styling */
 .landing-page {
-    font-family: "Times New Roman", Times, sans-serif;
-    background-color: #f7fafc;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f7fafc; /* Main background color */
     color: #333;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: relative; /* To position the SVG */
+}
+
+.landing-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; /* Send it behind other content */
+    background: url('data:image/svg+xml;utf8,<svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><defs><pattern id="circuit-pattern" patternUnits="userSpaceOnUse" width="100" height="100"><path d="M0,0 L100,0 L100,100 L0,100 Z" fill="%23f0f4f8" /><path d="M10,10 L10,90 M10,10 L90,10 M90,10 L90,90 M10,90 L90,90" stroke="%2300a8e8" stroke-width="2" /><path d="M30,30 L30,70 M30,30 L70,30 M70,30 L70,70 M30,70 L70,70" stroke="%2300a8e8" stroke-width="2" /></pattern></defs><rect width="100%" height="100%" fill="url(%23circuit-pattern)" /></svg>');
+    opacity: 0.1; /* Adjust the opacity for a subtle effect */
 }
 
 /* Header styling */
@@ -14,7 +27,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between; /* Ensure space between logo and navbar */
-    background-color: #343a40;
+    background: linear-gradient(90deg, #0d1b2a, #1b2631);
     padding: 10px 5%;
     color: white;
     border-bottom: 4px solid #00a8e8;
@@ -45,28 +58,35 @@
     justify-content: center; /* Horizontally centers the nav-links */
     align-items: center; /* Vertically centers the nav-links */
     flex-grow: 1; /* Ensures the navbar takes up available space */
+    padding: 15px 0; /* Padding for spacing */
+    border-radius: 10px; /* Rounded corners */
+    margin-top: 15px;
+    
 }
 
+/* Nav Links */
 .nav-links {
     list-style: none;
     display: flex;
     gap: 30px; /* Increased gap for better spacing */
-    margin: 20px 0 0 0; /* Top margin for spacing */
+    margin: 0; /* Remove margin for a cleaner look */
     padding: 0;
 }
 
 .nav-links li {
     cursor: pointer;
-    font-size: 16px;
+    font-size: 18px; /* Increased font size */
     color: white;
     text-transform: uppercase;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease; /* Added transform transition */
     display: flex;
     align-items: center; /* Vertically centers the text inside the list items */
 }
 
+/* Hover effect for nav links */
 .nav-links li:hover {
     color: #00a8e8;
+    transform: translateY(-2px); /* Slight lift effect */
 }
 
 /* Login Buttons Styling */
@@ -82,16 +102,17 @@
     color: #007bff;
     padding: 10px 20px; /* Increased padding for a more substantial look */
     border: none;
-    border-radius: 6px; /* Slightly rounded corners for a modern feel */
+    border-radius: 25px; /* More rounded corners for a modern feel */
     cursor: pointer;
     font-weight: bold;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Added transform transition */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Enhanced shadow for depth */
 }
 
 .admin-login:hover, .customer-login:hover {
     background-color: #007bff;
     color: white;
+    transform: translateY(-2px); /* Slight lift effect on hover */
 }
 
 /* Hero Section Styling */
@@ -147,7 +168,28 @@
     transform: translateX(100%); /* Start off-screen */
     animation: slideIn 1s forwards; /* Slide in animation */
 }
+.carousel {
+    position: relative;
+    width: 400px; /* Adjust width as needed */
+    height: 300px; /* Adjust height as needed */
+    overflow: hidden;
+    border-radius: 10px; /* Rounded corners */
+}
 
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease; /* Smooth transition */
+}
+
+.carousel-image {
+    min-width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.carousel-image.active {
+    opacity: 1; /* Show active image */
+}
 @keyframes slideIn {
     from {
         transform: translateX(100%); /* Start from the right */
@@ -198,18 +240,34 @@
 }
 
 .about-text h2 {
-    font-size: 36px; /* Slightly larger heading */
-    margin-bottom: 15px; /* Reduced margin for compactness */
-    font-weight: 600; /* Semi-bold for emphasis */
-    color: #333; /* Darker color for better readability */
+    font-size: 36px; 
+    margin-bottom: 50px;
+    color: #007bff; 
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
 }
 
+
 .about-text p {
-    font-size: 18px;
+    font-size: 20px; /* Font size */
     line-height: 1.8; /* Increased line height for readability */
     margin-bottom: 20px; /* Add margin at the bottom for spacing */
-    color: #555; /* Softer color for body text */
+    color: #333; /* Darker color for better contrast */
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly off-white background for contrast */
+    padding: 15px; /* Padding for better spacing */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease; /* Smooth transition effect */
 }
+
+.about-text p:hover {
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
 
 @media (max-width: 768px) {
     .about-section {
@@ -223,7 +281,6 @@
 }
 
 
-/* Services Section */
 /* Services Section */
 .services-section {
     padding: 60px 10%;
@@ -464,3 +521,66 @@
     }
   }
   
+  .customer-reviews-section {
+    padding: 50px 10%;
+    background-color: #f0f4f8; /* Light background for contrast */
+    text-align: center; /* Center the text */
+}
+
+.customer-reviews-section h2 {
+    font-size: 36px; 
+    margin-bottom: 50px;
+    color: #007bff; /* Modern accent color */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px; 
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px; 
+}
+.customer-reviews-section h2::after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 4px;
+    background-color: #00a8e8;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.reviews-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between review cards */
+    flex-wrap: wrap; /* Allow wrapping of cards */
+}
+
+.review-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px; /* Limit the card width */
+    transition: transform 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.review-text {
+    font-size: 16px;
+    color: #333; /* Dark text for readability */
+    margin-bottom: 15px; /* Space below the text */
+}
+
+.customer-name {
+    font-size: 18px;
+    font-weight: bold; /* Make the name stand out */
+    color: #007bff; /* Accent color */
+}
+
+.customer-rating {
+    color: #FFD700; /* Gold color for stars */
+    font-size: 18px; /* Size for the rating */
+}
