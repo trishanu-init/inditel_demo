@@ -1,0 +1,88 @@
+
+/* Full background and consistent theme with CustomerLogin */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.thank-you-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    background-color: #f7fafc; /* Same background as CustomerLogin */
+}
+
+/* Header styling matching CustomerLogin */
+.thank-you-header {
+    display: flex;
+    align-items: center;
+    background-color: #333; /* Same dark background as CustomerLogin */
+    padding: 10px;
+    color: white;
+    border-bottom: 4px solid #3e8e41; /* Same green border as CustomerLogin */
+    width: 100%;
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    width: 100%; /* Full width */
+    justify-content: center; /* Center logo and text */
+}
+
+.logo-image {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.company-name {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Main content styling */
+.thank-you-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.thank-you-content h1 {
+    font-size: 36px;
+    color: #4caf50; /* Using the same green color */
+    margin-bottom: 20px;
+}
+
+.thank-you-content p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+    max-width: 600px; /* Limit the width of text for better readability */
+}
+
+.home-button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.home-button:hover {
+    background-color: #45a049;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .thank-you-content {
+        padding: 20px;
+    }
+}

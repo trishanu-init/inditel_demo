@@ -1,0 +1,122 @@
+/* Full background and consistent theme with LandingPage */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .login-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the content vertically */
+    align-items: center; /* Center the content horizontally */
+    min-height: 100vh;
+    background-color: #f7fafc; /* Same background as landing page */
+  }
+  
+  /* Header styling centered */
+  .login-header {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    background-color: #333;
+    padding: 10px;
+    color: white;
+    border-bottom: 4px solid #3e8e41;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-image {
+    width: 40px;
+    margin-right: 10px;
+  }
+  
+  .company-name {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  /* Main form styling */
+  .login-main {
+    display: flex;
+    flex-direction: column; /* Stack form and button vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    padding: 30px;
+    flex-grow: 1;
+  }
+  
+  .login-form {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    position: relative; /* Position relative to allow absolute positioning of the button */
+  }
+  
+  /* Input fields */
+  .form-input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  /* Button styling */
+  .login-button {
+    background-color: #4caf50;
+    color: white;
+    padding: 12px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+  }
+  
+  .login-button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Forgot Password button styling */
+  .forgot-password-button {
+    background: none; /* Remove default button background */
+    border: none;
+    color: #4caf50; /* Button text color */
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+    padding: 0;
+    text-decoration: underline; /* Underline text for link effect */
+  }
+  
+  .forgot-password-button:hover {
+    color: #45a049;
+  }
+  
+  /* Error message styling */
+  .error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .login-form {
+      padding: 30px;
+      max-width: 90%;
+    }
+  }
+  

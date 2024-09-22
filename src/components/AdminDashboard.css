@@ -1,0 +1,152 @@
+/* AdminDashboard.css */
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard-container {
+    padding: 20px;
+}
+
+/* Navbar Styling */
+.admin-navbar, .submenu-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4a90e2;
+    padding: 15px 20px;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.admin-navbar .navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.admin-navbar .logo {
+    height: 50px;
+    margin-right: 20px;
+}
+
+.admin-navbar .admin-name {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.admin-navbar .logout-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.admin-navbar .logout-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Submenu Navbar */
+.submenu-navbar {
+    justify-content: flex-start;
+    margin-top: 20px;
+    background-color: #3b7bd4;
+    box-shadow: none;
+}
+
+.submenu-navbar button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
+    margin-right: 15px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.submenu-navbar button.active {
+    background-color: white;
+    color: #4a90e2;
+    border-radius: 5px;
+}
+
+.submenu-navbar button:hover {
+    background-color: #ffffff90;
+    color: #333;
+}
+
+/* Table Styling */
+.customer-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.customer-table th, .customer-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #dddddd;
+}
+
+.customer-table th {
+    background-color: #4a90e2;
+    color: white;
+    font-weight: bold;
+}
+
+.customer-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Button Styles */
+.activate-btn {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.activate-btn:hover {
+    background-color: #2ecc71;
+}
+
+/* Error Message */
+.error-message {
+    color: #e74c3c;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .admin-navbar, .submenu-navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .submenu-navbar button {
+        margin-bottom: 10px;
+    }
+
+    .customer-table, .customer-table th, .customer-table td {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .customer-table th, .customer-table td {
+        white-space: nowrap;
+    }
+}

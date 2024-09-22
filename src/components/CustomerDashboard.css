@@ -1,0 +1,54 @@
+/* Full-width container without extra padding */
+.container-fluid {
+    padding: 0;
+}
+
+/* Navbar adjustments */
+.navbar {
+    margin-bottom: 20px;
+    padding: 0 15px; /* Ensure padding for navbar content */
+}
+.btn-outline-light{
+    right: 0px;
+    left:50px;
+}
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+/* Adjust logo size in the navbar */
+.logo {
+    width: 40px; /* Desired width for the logo */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Spacing between logo and text */
+    /* Optional styles */
+    display: block; /* Ensure it’s a block-level element */
+    object-fit: contain; /* Ensure logo scales properly */
+}
+
+
+/* Full-width cards */
+.card {
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ensure cards use full width of container */
+    margin-bottom: 20px; /* Margin between cards */
+}
+
+/* Card header and body styling */
+.card-header {
+    border-bottom: 1px solid #dee2e6;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.alert {
+    margin-bottom: 1rem;
+}
+
+.img-thumbnail {
+    border-radius: 0.5rem;
+}

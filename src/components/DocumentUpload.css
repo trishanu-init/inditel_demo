@@ -1,0 +1,134 @@
+.document-upload-container {
+  padding: 20px;
+  padding-top: 100px; /* Add padding to avoid collision with the fixed header */
+}
+
+.document-upload-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-image {
+  height: 50px; /* Adjust as needed */
+}
+
+.company-name {
+  margin-left: 10px;
+  color: #333;
+}
+
+.home-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.upload-container {
+  margin-top: 20px;
+}
+
+.upload-form {
+  max-width: 500px;
+  margin: auto;
+}
+
+.upload-title {
+  margin-bottom: 20px;
+  margin-top: 20px; /* Add some margin to create separation */
+}
+
+.file-input-container {
+  margin-bottom: 20px;
+}
+
+.file-input {
+  display: block;
+  width: 100%;
+}
+
+.file-preview-container {
+  margin-top: 20px;
+}
+
+.file-preview-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.upload-button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.container {
+  background-color: #f7fafc; /* Same background as CustomerLogin */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  background-color: #333; /* Same dark background as CustomerLogin */
+  padding: 10px;
+  color: white;
+  border-bottom: 4px solid #3e8e41; /* Same green border as CustomerLogin */
+  width: 100%;
+  box-sizing: border-box; /* Ensure padding is included in width */
+  position: fixed; /* Fixed position to stay at the top */
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center; /* Center logo and text */
+}
+
+.logo-image {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.company-name {
+  font-size: 24px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.home-button {
+  background-color: #fff;
+  color: #007bff;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.home-button:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Titles */
+.title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
