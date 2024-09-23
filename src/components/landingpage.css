@@ -376,45 +376,60 @@
 
 /* Footer styling */
 .landing-footer {
-    background-color: black;
+    background-color: #0d1b2a;
     color: white;
-    padding: 10px;
+    padding: 40px 5%; 
     display: flex;
-    justify-content: space-around;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    justify-content: space-between; 
+    align-items: flex-start; 
+    flex-wrap: wrap; 
+    border-top: 2px solid #00a8e8; 
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Footer Column Styling */
 .footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
     text-align: left;
 }
 
+/* Footer Headings */
 .footer-column h3 {
     font-size: 18px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    color: #00a8e8; 
+    font-weight: bold; 
 }
 
+/* Footer List */
 .footer-column ul {
     list-style-type: none;
     padding: 0;
 }
 
 .footer-column li {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 .footer-column a {
-    color: white;
+    color: #f0f4f8;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .footer-column a:hover {
+    color: #00a8e8;
     text-decoration: underline;
 }
 
+/* Footer Paragraph */
 .footer-column p {
     margin: 5px 0;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
 }
-/* Add card-specific styles */
 /* General Styling for Catalog Section */
 .catalog {
     display: flex;

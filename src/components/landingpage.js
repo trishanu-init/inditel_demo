@@ -186,18 +186,27 @@ const LandingPage = () => {
 
       {/* Footer Section */}
       <footer className="landing-footer">
-        <div className="footer-column">
-          <h3>Contact Us</h3>
-          <p>Phone: 123-456-7890</p>
-          <p>Email: info@inditel.com</p>
-        </div>
-        <div className="footer-column">
-          <h3>Terms and Conditions</h3>
-          <ul>
-            <li><a href="#privacy">Privacy Policy</a></li>
-            <li><a href="#terms">Terms of Service</a></li>
-          </ul>
-        </div>
+              <div class="footer-column">
+                  <h3>About Us</h3>
+                  <ul>
+                      <li><a href="#">Company Info</a></li>
+                      <li><a href="#">Careers</a></li>
+                  </ul>
+              </div>
+              <div class="footer-column">
+                  <h3>Contact</h3>
+                  <ul>
+                      <li><a href="#">Email Us</a></li>
+                      <li><a href="#">Support</a></li>
+                  </ul>
+              </div>
+              <div class="footer-column footer-terms">
+                  <h3>Legal</h3>
+                  <ul>
+                      <li><a href="#">Privacy Policy</a></li>
+                      <li><a href="#">Terms and Conditions</a></li>
+                  </ul>
+              </div>
       </footer>
     </div>
   );
