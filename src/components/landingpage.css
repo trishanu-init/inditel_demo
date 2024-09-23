@@ -150,7 +150,14 @@
     border: none;
     border-radius: 10;
 }
-
+.cta-button-2 {
+    background-color: #013b4f;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10;
+    margin-left: 20px;
+}
 /* Hero Image Styling */
 .hero-image-container {
     flex: 1;

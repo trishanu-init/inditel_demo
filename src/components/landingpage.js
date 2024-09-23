@@ -94,6 +94,7 @@ const LandingPage = () => {
             </h1>
             <p class="hero-subtitle">Join us today and explore amazing opportunities!</p>
             <button class="cta-button" onClick={handleCustomerLogin}>Get Started</button>
+            <button class="cta-button-2" onClick={() => window.scrollTo(0, document.getElementById('services-section').offsetTop)}>Browse Plans</button>
         </div>
         <div class="hero-image-container">
         <img src={HeroImage} alt="About Us" className="about-image" />
