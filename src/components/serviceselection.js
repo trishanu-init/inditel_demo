@@ -102,7 +102,7 @@ const ServiceSelection = () => {
 
       {/* Dropdown for filtering between Prepaid, Postpaid, and All */}
       <select
-        className="service-filter"
+        className="modern-select"
         value={serviceType}
         onChange={(e) => setServiceType(e.target.value)}
       >

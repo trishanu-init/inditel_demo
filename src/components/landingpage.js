@@ -124,12 +124,13 @@ const LandingPage = () => {
 
         {/* Dropdown for selecting plan type */}
         <div className='dropDown'>
-        <select value={planType} onChange={(e) => setPlanType(e.target.value)}>
+        <select value={planType} className= "modern-select" onChange={(e) => setPlanType(e.target.value)}>
           <option value="All">All</option>
           <option value="Prepaid">Prepaid</option>
           <option value="Postpaid">Postpaid</option>
         </select>
         </div>
+
 
         <div className="catalog">
           {filteredPlans.length > 0 ? (
